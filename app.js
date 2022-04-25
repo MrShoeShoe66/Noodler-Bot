@@ -5,8 +5,9 @@ const generateImage = require('./getWelcomeImg')
 
 const TOKEN = process.env.TOKEN
 
-const JSONdb = require('simple-json-db');
-const db = new JSONdb('levels.json');
+const Database = require('elementary-db');
+const db = new Database('levels.json');
+
 
 const client = new Discord.Client({
     intents: [

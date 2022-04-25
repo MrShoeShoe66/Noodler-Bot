@@ -15,15 +15,40 @@ module.exports = {
             {
                 "name": 'Ping',
                 "value": 'Shows the latency of the bot',
-                "inline": true
+                "inline": false
             },
             {
-                "name": 'YouTube',
+                "name": '8ball',
+                "value": 'Runs a 8 ball your question',
+                "inline": false
+            },
+            {
+                "name": 'coin',
+                "value": 'Flips a coin',
+                "inline": false
+            },
+            {
+                "name": 'dice',
+                "value": 'Rowls a 6d dice',
+                "inline": false
+            },
+            {
+                "name": 'info',
+                "value": 'Shows bot info',
+                "inline": false
+            },
+            {
+                "name": 'level',
+                "value": 'Shows the user level',
+                "inline": false
+            },
+            {
+                "name": 'youtube',
                 "value": "Sends the Noodler's Youtube",
                 "inline": false
             },
             {
-                "name": 'Roblox',
+                "name": 'roblox',
                 "value": "Sends the Noodler's Roblox",
                 "inline": true
             }

@@ -12,16 +12,11 @@ module.exports = {
         if (message.author.bot) return
 
         if (!message.content.startsWith(prefix)) {
-            if (db.JSON()[message.author.id] === null) {
-                const tempJson = db.JSON()
-                tempJson[message.author.id] = 1
-                db.JSON(tempJson)
+            if (!db.has(message.author.id)) {
+                db.set(message.author.id, 1)
             }
-            const newXp = db.JSON()[message.author.id] + randomInt(15)
-            const tempJson = db.JSON()
-            tempJson[message.author.id] = newXp
-            db.JSON(tempJson)
-            db.sync()
+            const newXp = db.get(message.author.id) + randomInt(15)
+            db.set(message.author.id, newXp)
             return
         }
 

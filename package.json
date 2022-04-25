@@ -12,6 +12,6 @@
     "canvas": "^2.9.1",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
-    "simple-json-db": "^2.0.0"
+    "elementary-db": "^1.0.1"
   }
 }

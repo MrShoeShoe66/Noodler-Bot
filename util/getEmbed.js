@@ -10,7 +10,7 @@ const basicMsg = (tittle, fields) => {
         "footer": {
             "text": "A Discord bot For the Noodler's Server by MrShoe_#6147"
         },
-        "timestamp": true
+        "timestamp": Date.now()
     }
 }
 
@@ -24,7 +24,7 @@ const infoMsg = (tittle, fields) => {
         "footer": {
             "text": "A Discord bot For the Noodler's Server by MrShoe_#6147"
         },
-        "timestamp": true
+        "timestamp": Date.now()
     }
 }
 
@@ -38,7 +38,7 @@ const errorMsg = (tittle, fields) => {
         "footer": {
             "text": "A Discord bot For the Noodler's Server by MrShoe_#6147"
         },
-        "timestamp": true
+        "timestamp": Date.now()
     }
 }
 

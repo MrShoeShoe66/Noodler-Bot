@@ -3,7 +3,7 @@ const getEmbed = require('../../util/getEmbed')
 module.exports = {
     name: "clear",
     category: "admin",
-    permissions: ["MANAGE_MESSAGES"],
+    permissions: ["ADMINISTRATOR"],
     devOnly: false,
     run: async ({client, db, message, args}) => {
         message.channel.bulkDelete(100)

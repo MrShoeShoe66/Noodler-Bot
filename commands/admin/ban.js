@@ -3,7 +3,7 @@ const getEmbed = require('../../util/getEmbed')
 module.exports = {
     name: "ban",
     category: "admin",
-    permissions: ["BAN_MEMBERS"],
+    permissions: ["ADMINISTRATOR"],
     devOnly: false,
     run: async ({client, db, message, args}) => {
         await message.mentions.members.first().ban(args[1])

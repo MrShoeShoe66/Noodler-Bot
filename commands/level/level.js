@@ -18,7 +18,7 @@ module.exports = {
                 },
                 {
                     "name": 'Level',
-                    "value": `${Math.round(db.get(clientID) / 1000)}`,
+                    "value": `${Math.floor(db.get(clientID) / 1000)}`,
                     "inline": true
                 }
             ])
@@ -42,7 +42,7 @@ module.exports = {
                     },
                     {
                         "name": 'Level',
-                        "value": `${Math.round(db.get(user.id) / 1000)}`,
+                        "value": `${Math.floor(db.get(user.id) / 1000)}`,
                         "inline": true
                     }
                 ])

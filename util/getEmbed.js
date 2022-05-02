@@ -36,7 +36,7 @@ const errorMsg = (tittle, fields) => {
         "color": "#FF0000",
         "fields": fields,
         "footer": {
-            "text": "A Discord bot For the Noodler's Server by MrShoe_#6147"
+            "text": "A Discord bot For the Noodler's Server by MrShoe_#6147\nReport with .bug"
         },
         "timestamp": Date.now()
     }

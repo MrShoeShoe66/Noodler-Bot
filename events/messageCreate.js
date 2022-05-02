@@ -49,14 +49,12 @@ module.exports = {
         try {
             await command.run({client, db, message, args})
         } catch (err) {
-            let errMsg = err.toString()
-
-            if (errMsg.startsWith("?")) {
-                errMsg = errMsg.slice(1)
-                await message.reply(errMsg)
-            } else {
-                return
-            }
+            const errorMsg = getEmbed.err("Command Error", [{
+                "name": 'Error happend when runing your commnd!',
+                "value": `Error Log: \n${String(err)}`,
+                "inline": true
+            }])
+            return message.reply({embeds: [errorMsg]})
         }
     }
 }

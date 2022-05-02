@@ -13,7 +13,7 @@ module.exports = {
                 "inline": true
             },
             {
-                "name": 'Ping',
+                "name": 'ping',
                 "value": 'Shows the latency of the bot',
                 "inline": false
             },
@@ -50,7 +50,27 @@ module.exports = {
             {
                 "name": 'roblox',
                 "value": "Sends the Noodler's Roblox",
-                "inline": true
+                "inline": false
+            },
+            {
+                "name": 'bug',
+                "value": "Report bug with the bot",
+                "inline": false
+            },
+            {
+                "name": 'info',
+                "value": "Get bot info",
+                "inline": false
+            },
+            {
+                "name": 'level',
+                "value": "Get user info",
+                "inline": false
+            },
+            {
+                "name": 'adminhelp',
+                "value": "Show admin cmds",
+                "inline": false
             }
         ])
         message.reply({embeds: [embedMSG]})

@@ -3,7 +3,7 @@ const getEmbed = require('../../util/getEmbed')
 module.exports = {
     name: "kick",
     category: "admin",
-    permissions: ["KICK_MEMBERS"],
+    permissions: ["ADMINISTRATOR"],
     devOnly: false,
     run: async ({client, db, message, args}) => {
         await message.mentions.members.first().kick(args[1])

@@ -43,10 +43,14 @@ module.exports = {
         if (!args[0]) {
 			return message.reply('Please ask me a question.');
 		} else {
+            let question = ''
+            for (const property in args) {
+                question = `${question} ${args[property]}`
+            }
 			let index = (Math.floor(Math.random() * Math.floor(eightball.length)));
             const embedMSG = getEmbed.basic("8Ball!", [
                 {
-                    "name": `Question: ${args[0]}`,
+                    "name": `Question: ${question}`,
                     "value": `Response: ${eightball[index]}`,
                     "inline": true
                 },

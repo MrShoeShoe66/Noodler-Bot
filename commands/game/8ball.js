@@ -50,7 +50,7 @@ module.exports = {
                     "value": `Response: ${eightball[index]}`,
                     "inline": true
                 },
-            ])
+            ], message.author.username)
 			message.reply({embeds: [embedMSG]})
 		}
     }

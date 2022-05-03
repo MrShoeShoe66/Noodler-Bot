@@ -13,7 +13,7 @@ module.exports = {
                 "value": output.toString(),
                 "inline": true
             },
-        ])
+        ], message.author.username)
 		message.reply({embeds: [embedMSG]})
     }
 }

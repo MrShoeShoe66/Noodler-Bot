@@ -1,4 +1,3 @@
-const generateImage = require('../../getWelcomeImg')
 const getEmbed = require('../../util/getEmbed')
 
 module.exports = {
@@ -21,7 +20,7 @@ module.exports = {
                     "value": `${Math.floor(db.get(clientID) / 1000)}`,
                     "inline": true
                 }
-            ])
+            ], message.author.username)
             
             message.reply({embeds: [embedMSG]})
         } else {
@@ -45,7 +44,7 @@ module.exports = {
                         "value": `${Math.floor(db.get(user.id) / 1000)}`,
                         "inline": true
                     }
-                ])
+                ], message.author.username)
                 
                 message.reply({embeds: [embedMSG]})
             }

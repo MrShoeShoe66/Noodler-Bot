@@ -23,7 +23,7 @@ module.exports = {
                 "inline": false
             },
             {
-                "name": 'Clear',
+                "name": 'clear',
                 "value": `Clear a channel`,
                 "inline": false
             },
@@ -32,7 +32,7 @@ module.exports = {
                 "value": `Timeout a user`,
                 "inline": false
             }
-        ])
+        ], message.author.username)
         message.reply({embeds: [embedMSG]})
     }
 }

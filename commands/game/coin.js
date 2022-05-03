@@ -15,7 +15,7 @@ module.exports = {
                     "value": 'Heads!',
                     "inline": true
                 },
-            ])
+            ], message.author.username)
             message.reply({embeds: [embedMSG]})
         } else {
             const embedMSG = getEmbed.basic("Coin!", [
@@ -24,7 +24,7 @@ module.exports = {
                     "value": 'Tails!',
                     "inline": true
                 },
-            ])
+            ], message.author.username)
             message.reply({embeds: [embedMSG]})
         }
     }

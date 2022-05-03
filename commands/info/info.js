@@ -27,7 +27,7 @@ module.exports = {
                 "value": `https://github.com/MrShoeShoe66/Noodler-Bot`,
                 "inline": false
             }
-        ])
+        ], message.author.username)
         message.reply({embeds: [embedMSG]})
     }
 }

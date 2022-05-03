@@ -21,7 +21,7 @@ module.exports = {
                     "value": `Timed out user`,
                     "inline": true
                 }
-            ])
+            ], message.author.username)
             message.channel.send({ embeds: [embedMSG] })
         } catch (error) {
             message.reply('An error occored when using that command!')

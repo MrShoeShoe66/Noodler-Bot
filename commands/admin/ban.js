@@ -13,7 +13,7 @@ module.exports = {
                 "value": `Baned user`,
                 "inline": true
             }
-        ])
+        ], message.author.username)
         message.channel.send({ embeds: [embedMSG] })
     }
 }

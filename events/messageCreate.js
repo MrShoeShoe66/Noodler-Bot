@@ -49,12 +49,21 @@ module.exports = {
         try {
             await command.run({client, db, message, args})
         } catch (err) {
-            const errorMsg = getEmbed.err("Command Error", [{
-                "name": 'Error happend when runing your commnd!',
-                "value": `Error Log: \n${String(err)}`,
-                "inline": true
-            }])
-            return message.reply({embeds: [errorMsg]})
+            try {
+                const errorMsg = getEmbed.err("Command Error", [{
+                    "name": 'Error happend when runing your commnd!',
+                    "value": `Error Log: \n${String(err)}`,
+                    "inline": true
+                }], message.author.username)
+                return message.reply({embeds: [errorMsg]})
+            } catch (error) {
+                const errorMsg = getEmbed.err("Command Error", [{
+                    "name": 'Error happend when runing your commnd!',
+                    "value": `Error Log: \n${String(err)}`,
+                    "inline": true
+                }], message.author.username)
+                return message.channel.send({embeds: [errorMsg]})
+            }
         }
     }
 }

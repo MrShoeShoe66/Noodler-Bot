@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 
-const basicMsg = (tittle, fields) => {
+const basicMsg = (tittle, fields, username) => {
     return {
         "type": "rich",
         "title": tittle,
@@ -10,11 +10,12 @@ const basicMsg = (tittle, fields) => {
         "footer": {
             "text": "A Discord bot For the Noodler's Server by MrShoe_#6147"
         },
-        "timestamp": Date.now()
+        "timestamp": Date.now(),
+        "username": username
     }
 }
 
-const infoMsg = (tittle, fields) => {
+const infoMsg = (tittle, fields, username) => {
     return {
         "type": "rich",
         "title": tittle,
@@ -24,11 +25,12 @@ const infoMsg = (tittle, fields) => {
         "footer": {
             "text": "A Discord bot For the Noodler's Server by MrShoe_#6147"
         },
-        "timestamp": Date.now()
+        "timestamp": Date.now(),
+        "username": username
     }
 }
 
-const errorMsg = (tittle, fields) => {
+const errorMsg = (tittle, fields, username) => {
     return {
         "type": "rich",
         "title": `Error: ${tittle}`,
@@ -38,7 +40,8 @@ const errorMsg = (tittle, fields) => {
         "footer": {
             "text": "A Discord bot For the Noodler's Server by MrShoe_#6147\nReport with .bug"
         },
-        "timestamp": Date.now()
+        "timestamp": Date.now(),
+        "username": username
     }
 }
 

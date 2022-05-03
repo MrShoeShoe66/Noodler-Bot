@@ -64,7 +64,17 @@ module.exports = {
             },
             {
                 "name": 'level',
-                "value": "Get user info",
+                "value": "Get user level",
+                "inline": false
+            },
+            {
+                "name": 'socal',
+                "value": "Show all socal links",
+                "inline": false
+            },
+            {
+                "name": 'invite',
+                "value": "Get server info",
                 "inline": false
             },
             {
@@ -72,7 +82,7 @@ module.exports = {
                 "value": "Show admin cmds",
                 "inline": false
             }
-        ])
+        ], message.author.username)
         message.reply({embeds: [embedMSG]})
     }
 }

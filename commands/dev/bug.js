@@ -23,7 +23,7 @@ module.exports = {
                 "value": 'MrShoe_#6147',
                 "inline": false
             }
-        ])
+        ], message.author.username)
         message.reply({embeds: [embedMSG]})
     }
 }

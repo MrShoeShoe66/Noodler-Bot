@@ -19,7 +19,7 @@ module.exports = {
                 "value": `${apiLatency}ms`,
                 "inline": true
             }
-        ])
+        ], message.author.username)
         message.reply({embeds: [embedMSG]})
     }
 }

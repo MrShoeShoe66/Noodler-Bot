@@ -1,4 +1,4 @@
-const getSocal = require('../../util/getSocal')
+const getEmbed = require('../../util/getEmbed')
 
 module.exports = {
     name: "youtube",
@@ -6,7 +6,11 @@ module.exports = {
     permissions: [],
     devOnly: false,
     run: async ({client, db, message, args}) => {
-        embededMsg = getSocal("Youtube", "https://www.youtube.com/thenoodlernoodleasmr")
+        const embededMsg = getEmbed.basic('Youtube', [{
+            "name": 'https://www.youtube.com/thenoodlernoodleasmr',
+            "value": `Here Is the Noodler's Youtube`,
+            "inline": true
+        }], message.author.username)
         message.reply({ embeds: [embededMsg] })
     }
 }

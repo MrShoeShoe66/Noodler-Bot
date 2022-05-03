@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 require('dotenv').config()
 
-const generateImage = require('./getWelcomeImg')
+const generateImage = require('./util/getWelcomeImg')
 
 const TOKEN = process.env.TOKEN
 
@@ -35,7 +35,7 @@ client.loadCommands(bot, false)
 
 module.exports = bot
 
-const welcomeChannelId = "963487256482578553"
+const welcomeChannelId = "782090951182516265"
 
 client.on("guildMemberAdd", async (member) => {
     const img = await generateImage(member)
